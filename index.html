@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechQuizzer — Science: Computers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="app-header">
+        <h1>TechQuizzer</h1>
+    </header>
+
+    <main class="container">
+        <section class="intro">
+            <p class="muted">TechQuizzer is a simple quiz that serves 10 questions about technology/computers. Click Start to begin and test your tech knowledge.</p>
+        </section>
+        <section class="controls">
+            <button id="startBtn" class="btn primary">Start Quiz</button>
+            <button id="nextBtn" class="btn" disabled>Next</button>
+            <button id="restartBtn" class="btn" hidden>Restart</button>
+        </section>
+
+        <section id="status" class="status" aria-live="polite"></section>
+
+        <section id="card" class="card" hidden>
+            <div class="meta">
+                <span id="category" class="badge"></span>
+                <span id="difficulty" class="badge"></span>
+                <span id="progress" class="muted"></span>
+            </div>
+            <h2 id="question" class="question"></h2>
+            <ul id="answers" class="answers" role="list"></ul>
+        </section>
+
+        <section id="result" class="result" hidden>
+            <h2>Your Score</h2>
+            <p><span id="score"></span> / <span id="total"></span></p>
+        </section>
+    </main>
+
+    <footer class="app-footer">
+        <small>Data by <a href="https://opentdb.com/api_config.php" target="_blank" rel="noreferrer noopener">OpenTDB</a></small>
+    </footer>
+
+    <script src="app.js"></script>
+    
+</body>
+</html>
+
+
